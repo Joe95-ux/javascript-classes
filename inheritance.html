@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Classes: Inheritance and extends</title>
+</head>
+<body>
+    <h2>Inheritance and extends in Javascript Classes</h2>
+    <script>
+        class Person {
+            constructor(_age, _name){
+                this.age = _age;
+                this.name = _name;
+            }
+
+            describe(){
+                console.log(`I am ${this.name} and I am ${this.age}`);
+            }
+        }
+
+        //child class creation.
+
+        class Programmer extends Person {
+            constructor(_age, _name, _yearsOfExperience){
+                //we call the parent class(Person class) constructor since its constructor is derived from it.
+
+                super(_age, _name);
+                // Programmer instance unique property
+                this.yearsOfExperience = _yearsOfExperience;
+            }
+
+            code(){
+                console.log(`${this.name} is coding.`);
+            }
+        }
+
+        let programmers = [
+            new Programmer(24, "Carl", 4),
+            new Programmer(34, "Serge", 6)
+        ];
+
+        function developSoftware(programmers){
+            for(let programmer of programmers){
+                programmer.code();
+            }
+        };
+
+        developSoftware(programmers);
+
+
+        
+    
+    </script>
+
+
+
+
+</body>
+
+</html>

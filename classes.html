@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Classes</title>
+</head>
+<body>
+   
+    <h1>Javascript Classes</h1>
+    <script>
+        // class Rectangle {
+        //     // set up object 
+        //     // instance properties 
+        //     constructor(_width, _length, _color){
+        //         this.width = _width;
+        //         this.length = _length;
+        //         this.color = _color;
+
+        //     }
+
+        //     //  instance method 
+        //     getArea(){
+        //         return(this.width * this.length)
+        //      }
+
+        //     printDescription(){
+        //         console.log(`I am ${this.width} by ${this.length} and I am ${this.color}`);
+        //     }
+        // }
+        // // new object
+
+        // const myRectangle1 = new Rectangle(5, 10, "blue");
+        // const myRectangle2 = new Rectangle(3, 8, "red");
+
+        // console.log(myRectangle2);
+        // myRectangle2.printDescription();
+
+        // Classes: getters and setters
+
+        // class Square {
+        //     constructor(_width){
+        //         this.width = _width;
+        //         this.height = _width;
+        //         this.numAreaRequest = 0;
+        //     }
+
+        //     //getter(creates instance method which will act as instance property)
+
+        //     get area (){
+        //         this.numAreaRequest++;
+        //         return(this.width * this.height);
+        //     }
+
+        //     //setter will update the instance properties specified.
+        //     set area (area){
+        //         this.width = Math.sqrt(area);
+        //         this.height = this.width;
+        //     }
+        // }
+
+        // // create an instance
+
+        // let square1 = new Square(5);
+
+        // square1.area = 16;
+
+        // console.log(square1.area);
+        // console.log(square1.area);
+        // console.log(square1.area);
+        // console.log(square1.area);
+        // console.log(square1.numAreaRequest);
+        
+
+        // classes: static methods(helper methods which dont depend on object instance)
+
+        class Square {
+            constructor(_width) {
+                this.width = _width;
+                this.height = _width;
+            }
+
+            static compare(a, b){
+                return (a.width * a.height === b.width * b.height);
+            }
+        }
+
+        let square1 = new Square(5);
+        let square2 = new Square(9);
+
+        console.log(Square.compare(square1, square2));
+
+
+    
+    </script>
+
+
+    
+    
+</body>
+</html>
